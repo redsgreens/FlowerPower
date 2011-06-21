@@ -10,8 +10,11 @@ Permissions: If a permissions plugin is loaded, then "flowerpower.throw" permiss
 Config File:
 
     WandItem: The name or id number of the item that must be held in the hand to throw fireballs. Defaults to "red_rose".
+
     CoolDownInterval: Minimum time in seconds between fireballs. Default is 1 second.
+
     RequireCommandToggle: If set to "yes", the command "/flowerpower" must be used to enable/disable the fireball functionality. Defaults to "yes".
+
     ShowErrorsInClient: Self explanatory. Defaults to "yes".
 
 More Info: http://forums.bukkit.org/threads/22375/
