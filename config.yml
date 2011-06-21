@@ -1,0 +1,30 @@
+#
+# WandItem: item used in game to throw a fireball 
+#
+# Allowed values: any item id or item name (default is red_rose)
+# 
+WandItem: red_rose
+
+#
+# CoolDownInterval: length of time, in seconds, between fireballs
+#
+# Allowed values: any number 0 or larger (default is 1)
+# 
+CoolDownInterval: 1
+
+#
+# RequireCommandToggle: toggle that determines if a command is required to enable fireballs
+#
+# Allowed values : Yes (player must use the /flowerpower command to enable/disable fireballs)
+#                  No  (fireballs are always enabled when left clicking with the wand item)
+# 
+RequireCommandToggle: Yes
+
+#
+# ShowErrorsInClient: toggle that determines if permissions or other error messages
+#                     are displayed client-side
+#
+# Allowed values : Yes (shows errors to players)
+#                  No  (errors only show up in server console)
+# 
+ShowErrorsInClient: Yes
