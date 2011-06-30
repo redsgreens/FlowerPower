@@ -1,7 +1,7 @@
 name: FlowerPower
 main: redsgreens.FlowerPower.FlowerPower
 version: 0.2
-url: "http://forums.bukkit.org/threads/22375/"
+website: http://forums.bukkit.org/threads/22375/
 commands:
   flowerpower:
     description: 'Toggles throwing fireballs on or off' 
