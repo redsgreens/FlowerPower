@@ -16,7 +16,8 @@ public class FlowerPowerConfig {
 	public Boolean ShowErrorsInClient = true;
 	public Double CoolDownInterval = 1D;
 	public Boolean RequireCommandToggle = true;
-
+	public Boolean TakeItemFromPlayer = false;
+	public Double FireballYieldMultiplier = 1D;
 	
     public FlowerPowerConfig(FlowerPower instance) {
         plugin = instance;
@@ -80,6 +81,19 @@ public class FlowerPowerConfig {
 			}
 			System.out.println(plugin.Name + ": CoolDownInterval=" + CoolDownInterval.toString() + " seconds");
 
+			if(configMap.containsKey("TakeItemFromPlayer"))
+				TakeItemFromPlayer = (Boolean)configMap.get("TakeItemFromPlayer");
+			System.out.println(plugin.Name + ": TakeItemFromPlayer=" + TakeItemFromPlayer.toString());
+
+			if(configMap.containsKey("FireballYieldMultiplier"))
+			{
+				String str = configMap.get("FireballYieldMultiplier").toString();
+				FireballYieldMultiplier = Double.parseDouble(str);
+				if(FireballYieldMultiplier < 0)
+					FireballYieldMultiplier = 1D;
+			}
+			System.out.println(plugin.Name + ": FireballYieldMultiplier=" + FireballYieldMultiplier.toString());
+			
 			if(configMap.containsKey("WandItem"))
 			{
 				String wiStr = configMap.get("WandItem").toString();

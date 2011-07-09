@@ -8,6 +8,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerListener;
 import org.bukkit.entity.*;
+import org.bukkit.inventory.ItemStack;
 
 /**
  * Handle events for all Player related events
@@ -57,7 +58,20 @@ public class FlowerPowerPlayerListener extends PlayerListener {
 				
 				Location playerLoc = player.getLocation();
 				Location loc = playerLoc.add(playerLoc.getDirection().normalize().multiply(3).toLocation(player.getWorld(), playerLoc.getYaw(), playerLoc.getPitch())).add(0, 1D, 0);
-				player.getWorld().spawn(loc, Fireball.class);
+				Fireball f = player.getWorld().spawn(loc, Fireball.class);
+				f.setYield(plugin.Config.FireballYieldMultiplier.floatValue());
+				
+				if(plugin.Config.TakeItemFromPlayer)
+				{
+					ItemStack is = player.getItemInHand();
+					if(is.getAmount() == 1)
+						player.setItemInHand(null);
+					else
+					{
+						is.setAmount(is.getAmount() - 1);
+						player.setItemInHand(is);
+					}
+				}
 			}
 		}
     }

@@ -21,6 +21,26 @@ CoolDownInterval: 1
 RequireCommandToggle: Yes
 
 #
+# TakeItemFromPlayer: toggle that determines if the wand item should be taken from the player
+#                     when a fireball is thrown
+#
+# Allowed values : Yes (item is taken from player [only one if the player holds a stack])
+#                  No  (no item is taken from player)
+# 
+TakeItemFromPlayer: No
+
+#
+# FireballYieldMultiplier: allows adjustment of the fireball explosion yield. A value of 1.0
+#                          is equal to a standard ghast fireball. A value of 0.5 makes the
+#                          fireballs half as powerful, and a value of 2.0 makes them twice
+#                          as powerful. Be careful with very large values, you might crash
+#                          your server
+#
+# Allowed values : Any number greater than zero
+# 
+FireballYieldMultiplier: 1.0
+
+#
 # ShowErrorsInClient: toggle that determines if permissions or other error messages
 #                     are displayed client-side
 #
